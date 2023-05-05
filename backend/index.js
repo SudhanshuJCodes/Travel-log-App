@@ -23,6 +23,6 @@ const port = process.env.PORT || 8080;
 mongoose
     .connect(process.env.MONGO_URL)
     .then(() => {
-        app.listen(8080, () => console.log(`Server running on port 8080`));
+        app.listen(port, () => console.log(`Server running on port 8080`));
     })
     .catch((error) => console.log(`${error} did not connect`));
