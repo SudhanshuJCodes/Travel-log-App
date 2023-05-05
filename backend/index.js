@@ -16,7 +16,9 @@ app.use(cors());
 
 app.use('/users', userRouter); //http://localhost:8080/users/signup
 app.use('/tour', tourRouter);
-
+app.get('/', (req, res) => {
+    res.send("Server working");
+});
 
 const port = process.env.PORT || 8080;
 
